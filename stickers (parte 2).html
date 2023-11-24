@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/css/normalize.css" />
+  <link rel="stylesheet" href="./assets/css/estilos.css" />
+  <title>Document</title>
+</head>
+
+<body>
+
+<h1>Puedes llevar hasta 10 stickers en total</h1>
+
+
+  <div id="stickers">
+    <div id="s1" class="stick">
+      <img src="./assets/img/scorpion.jpg" alt="">
+      <input id="cant1" type="number">
+    </div>
+    <div id="s2" class="stick">
+      <img src="./assets/img/shinchan.jpg" alt="">
+      <input id="cant2" type="number">
+    </div>
+    <div id="s3" class="stick">
+      <img src="./assets/img/harley.jpg" alt="">
+      <input id="cant3" type="number">
+    </div>
+  </div>
+
+
+  <div class="finalstickers">
+  <p id="respuesta"> </p>
+
+  <button class="btnstickers" onclick="
+let cantidad1 = document.querySelector('#cant1').value;
+let cantidad2 = document.querySelector('#cant2').value;
+let cantidad3 = document.querySelector('#cant3').value;
+let total = (Number(cantidad1)+Number(cantidad2)+Number(cantidad3));
+
+
+if(total <=10){
+  let respuesta = document.querySelector('#respuesta');
+  respuesta.innerHTML= ('llevas '+total+' stickers');
+} 
+else {
+  let respuesta = document.querySelector('#respuesta');
+  respuesta.innerHTML = ('Llevas demasiados stickers'); 
+}
+
+">Verificar</button>
+</div>
+  
+<div class="enlaces">
+    <a href="./imagen (parte 1).html">Imagen</a>
+    <a href="./stickers (parte 2).html">Stickers</a>
+    <a href="./password (parte3).html">Password</a>
+</div>
+  
+
+
+<script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>
